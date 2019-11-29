@@ -5,14 +5,16 @@
   
 
   
-  <title>你好,Hexo | Hexo</title>
+  <title>题目31五个数求最值 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="你好,Hexo">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;25&#x2F;%E4%BD%A0%E5%A5%BD-Hexo&#x2F;index.html">
+  <meta name="description" content="5个数求最值时间限制：1000 ms  |  内存限制：65535 KB 描述    设计一个从5个整数中取最小数和最大数的程序 输入    输入只有一组测试数据，为五个不大于1万的正整数输出    输出两个数，第一个为这五个数中的最小值，第二个为这五个数中的最大值，两个数字以空格格开。样例输入 1 2 3 4 5样例输出 1 51234567891011121314151617181920#in">
+<meta property="og:type" content="article">
+<meta property="og:title" content="题目31五个数求最值">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;30&#x2F;%E9%A2%98%E7%9B%AE31%E4%BA%94%E4%B8%AA%E6%95%B0%E6%B1%82%E6%9C%80%E5%80%BC&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="5个数求最值时间限制：1000 ms  |  内存限制：65535 KB 描述    设计一个从5个整数中取最小数和最大数的程序 输入    输入只有一组测试数据，为五个不大于1万的正整数输出    输出两个数，第一个为这五个数中的最小值，第二个为这五个数中的最大值，两个数字以空格格开。样例输入 1 2 3 4 5样例输出 1 51234567891011121314151617181920#in">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-25T09:54:04.667Z">
+<meta property="og:updated_time" content="2019-11-29T16:51:59.716Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -60,10 +62,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-你好-Hexo" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-题目31五个数求最值" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/11/25/%E4%BD%A0%E5%A5%BD-Hexo/" class="article-date">
-  <time datetime="2019-11-25T09:54:04.000Z" itemprop="datePublished">2019-11-25</time>
+    <a href="/2019/11/30/%E9%A2%98%E7%9B%AE31%E4%BA%94%E4%B8%AA%E6%95%B0%E6%B1%82%E6%9C%80%E5%80%BC/" class="article-date">
+  <time datetime="2019-11-29T16:51:59.583Z" itemprop="datePublished">2019-11-30</time>
 </a>
     
   </div>
@@ -74,7 +76,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      你好,Hexo
+      题目31五个数求最值
     </h1>
   
 
@@ -82,11 +84,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>5个数求最值<br>时间限制：1000 ms  |  内存限制：65535 KB</p>
+<p>描述<br>    设计一个从5个整数中取最小数和最大数的程序</p>
+<p>输入<br>    输入只有一组测试数据，为五个不大于1万的正整数<br>输出<br>    输出两个数，第一个为这五个数中的最小值，第二个为这五个数中的最大值，两个数字以空格格开。<br>样例输入</p>
+<pre><code>1 2 3 4 5</code></pre><p>样例输出</p>
+<pre><code>1 5</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">void main()</span><br><span class="line">&#123;</span><br><span class="line"> int num[5],max,min,i;</span><br><span class="line"> for(i=0;i&lt;5;i++)</span><br><span class="line">  scanf(&quot;%d&quot;,&amp;num[i]);</span><br><span class="line"> max=num[0];</span><br><span class="line"> min=num[0];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> for(i=1;i&lt;5;i++)</span><br><span class="line"> &#123;</span><br><span class="line">  if(max&lt;num[i])</span><br><span class="line">   max=num[i];</span><br><span class="line">  if(min&gt;num[i])</span><br><span class="line">   min=num[i];</span><br><span class="line"> &#125;</span><br><span class="line"> printf(&quot;%d &quot;,min);</span><br><span class="line"> printf(&quot;%d\n&quot;,max);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/25/%E4%BD%A0%E5%A5%BD-Hexo/" data-id="ck3e997tj0001usvreuklhwoi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/30/%E9%A2%98%E7%9B%AE31%E4%BA%94%E4%B8%AA%E6%95%B0%E6%B1%82%E6%9C%80%E5%80%BC/" data-id="ck3kfk5ht0003n4vr1wk9gw81" class="article-share-link">Share</a>
       
       
     </footer>
@@ -95,19 +102,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/11/29/%E9%A2%98%E7%9B%AE1%20%EF%BC%9AA+B%20Problem/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/30/%E9%A2%98%E7%9B%AE34%E9%9F%A9%E4%BF%A1%E7%82%B9%E5%85%B5/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          题目1 ：A+B Problem
+          题目34韩信点兵
         
       </div>
     </a>
   
   
-    <a href="/2019/11/25/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/11/30/%E9%A2%98%E7%9B%AE11%E5%A5%87%E5%81%B6%E6%95%B0%E5%88%86%E7%A6%BB/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">题目11奇偶数分离</div>
     </a>
   
 </nav>
