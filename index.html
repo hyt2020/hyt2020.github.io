@@ -61,6 +61,229 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-题目324猴子吃桃问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/01/%E9%A2%98%E7%9B%AE324%E7%8C%B4%E5%AD%90%E5%90%83%E6%A1%83%E9%97%AE%E9%A2%98/" class="article-date">
+  <time datetime="2019-12-01T03:31:31.097Z" itemprop="datePublished">2019-12-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/01/%E9%A2%98%E7%9B%AE324%E7%8C%B4%E5%AD%90%E5%90%83%E6%A1%83%E9%97%AE%E9%A2%98/">题目324猴子吃桃问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>猴子吃桃问题<br>时间限制：3000 ms  |  内存限制：65535 KB</p>
+<p>描述<br>    有一堆桃子不知数目，猴子第一天吃掉一半，又多吃了一个，第二天照此方法，吃掉剩下桃子的一半又多一个，天天如此，到第m天早上，猴子发现只剩一只桃子了，问这堆桃子原来有多少个？ (m&lt;29)</p>
+<p>输入<br>    第一行有一个整数n,表示有n组测试数据（从第二行开始，每一行的数据为：第m天）；<br>输出<br>    每一行数据是桃子的总个数<br>样例输入</p>
+<pre><code>2
+3
+11</code></pre><p>样例输出</p>
+<pre><code>22
+6142</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">   int N,i,a[100],m,j,s;</span><br><span class="line">   scanf(&quot;%d&quot;, &amp;N);</span><br><span class="line">   i = 0;</span><br><span class="line">     while (i &lt; N)</span><br><span class="line">	 &#123;</span><br><span class="line">       scanf(&quot;%d&quot;,&amp;m);</span><br><span class="line">       s=1;</span><br><span class="line">		for(j=0;j&lt;m;j++)</span><br><span class="line">        s=(s+1)*2;</span><br><span class="line">        a[i]=s;</span><br><span class="line">        i++;</span><br><span class="line">     &#125;</span><br><span class="line">          printf(&quot;%d\n&quot;, a[i]);</span><br><span class="line">  return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/01/%E9%A2%98%E7%9B%AE324%E7%8C%B4%E5%AD%90%E5%90%83%E6%A1%83%E9%97%AE%E9%A2%98/" data-id="ck3mg85130001g4vrbi5s2rwq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-题目260数数小木块" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/01/%E9%A2%98%E7%9B%AE260%E6%95%B0%E6%95%B0%E5%B0%8F%E6%9C%A8%E5%9D%97/" class="article-date">
+  <time datetime="2019-12-01T03:24:30.156Z" itemprop="datePublished">2019-12-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/01/%E9%A2%98%E7%9B%AE260%E6%95%B0%E6%95%B0%E5%B0%8F%E6%9C%A8%E5%9D%97/">题目260数数小木块</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>数数小木块<br>时间限制：3000 ms  |  内存限制：65535 KB</p>
+<p>描述</p>
+<pre><code>在墙角堆放着一堆完全相同的正方体小木块，如下图所示：</code></pre><p><img src="https://img-blog.csdnimg.cn/20191201112303552.jpg" alt="如图所示"></p>
+<pre><code> 因为木块堆得实在是太有规律了，你只要知道它的层数就可以计算所有木块的数量了。
+
+现在请你写个程序 给你任一堆木块的层数，求出这堆木块的数量.</code></pre><p>输入<br>    第一行是一个整数N(N&lt;=10)表示测试数据的组数）<br>    接下来的n行 每行只有一个整数 ，表示这堆小木块的层数，<br>输出<br>    对应每个输入的层数有一个输出，表示这堆小木块的总数量，每个输出占一行<br>样例输入</p>
+<pre><code>2
+1
+5</code></pre><p>样例输出</p>
+<pre><code>1
+35</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int n,m,s,i;</span><br><span class="line">	scanf(&quot;%d&quot;,&amp;n);</span><br><span class="line">	while(n--)</span><br><span class="line">	&#123;</span><br><span class="line">		s=0;</span><br><span class="line">		scanf(&quot;%d&quot;,&amp;m);</span><br><span class="line">		for(i=1;i&lt;=m;i++)</span><br><span class="line">		s+=i*(i+1)/2;</span><br><span class="line">		printf(&quot;%d\n&quot;,s);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/01/%E9%A2%98%E7%9B%AE260%E6%95%B0%E6%95%B0%E5%B0%8F%E6%9C%A8%E5%9D%97/" data-id="ck3mg84yj0000g4vrfl83ayh2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-题目457大小写互换" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/01/%E9%A2%98%E7%9B%AE457%E5%A4%A7%E5%B0%8F%E5%86%99%E4%BA%92%E6%8D%A2/" class="article-date">
+  <time datetime="2019-12-01T03:15:22.428Z" itemprop="datePublished">2019-12-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/01/%E9%A2%98%E7%9B%AE457%E5%A4%A7%E5%B0%8F%E5%86%99%E4%BA%92%E6%8D%A2/">题目457大小写互换</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>大小写互换<br>时间限制：1000 ms  |  内存限制：65535 KB</p>
+<p>描述<br>          现在给出了一个只包含大小写字母的字符串，不含空格和换行，要求把其中的大写换成小写，小写换成大写，然后输出互换后的字符串。</p>
+<p>输入<br>    第一行只有一个整数m（m&lt;=10),表示测试数据组数。<br>    接下来的m行，每行有一个字符串（长度不超过100）。<br>输出<br>    输出互换后的字符串，每组输出占一行。<br>样例输入</p>
+<pre><code>2
+Acm
+ACCEPTED</code></pre><p>样例输出</p>
+<pre><code>aCM
+accepted</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;string.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int t,i,n;char a,s[100];</span><br><span class="line">	scanf(&quot;%d&quot;,&amp;t);</span><br><span class="line">	getchar();</span><br><span class="line">	while(t--)</span><br><span class="line">	&#123;</span><br><span class="line">		gets(s);</span><br><span class="line">		n=strlen(s);</span><br><span class="line">		for(i=0;i&lt;=n;i++)	</span><br><span class="line">		&#123;</span><br><span class="line">			if(s[i]&lt;=&apos;z&apos;&amp;&amp;s[i]&gt;=&apos;a&apos;)</span><br><span class="line">			&#123;</span><br><span class="line">				printf(&quot;%c&quot;,s[i]-32);</span><br><span class="line">			&#125;</span><br><span class="line">			if(s[i]&lt;=&apos;Z&apos;&amp;&amp;s[i]&gt;=&apos;A&apos;)</span><br><span class="line">			&#123;</span><br><span class="line">				printf(&quot;%c&quot;,s[i]+32);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		printf(&quot;\n&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/01/%E9%A2%98%E7%9B%AE457%E5%A4%A7%E5%B0%8F%E5%86%99%E4%BA%92%E6%8D%A2/" data-id="ck3mg85170003g4vreuz9fdah" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-题目39水仙花数" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/01/%E9%A2%98%E7%9B%AE39%E6%B0%B4%E4%BB%99%E8%8A%B1%E6%95%B0/" class="article-date">
+  <time datetime="2019-12-01T03:05:41.031Z" itemprop="datePublished">2019-12-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/01/%E9%A2%98%E7%9B%AE39%E6%B0%B4%E4%BB%99%E8%8A%B1%E6%95%B0/">题目39水仙花数</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>水仙花数<br>时间限制：1000 ms  |  内存限制：65535 KB</p>
+<p>描述<br>    请判断一个数是不是水仙花数。<br>    其中水仙花数定义各个位数立方和等于它本身的三位数。</p>
+<p>输入<br>    有多组测试数据，每组测试数据以包含一个整数n(100&lt;=n&lt;1000)<br>    输入0表示程序输入结束。<br>输出<br>    如果n是水仙花数就输出Yes<br>    否则输出No<br>样例输入</p>
+<pre><code>153
+154
+0</code></pre><p>样例输出</p>
+<pre><code>Yes
+No</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;stdlib.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int n,j,t,h,x;</span><br><span class="line">    while(scanf(&quot;%d&quot;,&amp;n)!=EOF&amp;&amp;n!=0)</span><br><span class="line">    &#123;</span><br><span class="line">        j=n%10;</span><br><span class="line">        ten=(n/10)%10;</span><br><span class="line">        hun=n/100;</span><br><span class="line">        x=j*j*j+ten*t*t+h*h*h;</span><br><span class="line">        if(x==n)</span><br><span class="line">            printf(&quot;Yes\n&quot;);</span><br><span class="line">        else</span><br><span class="line">            printf(&quot;No\n&quot;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/01/%E9%A2%98%E7%9B%AE39%E6%B0%B4%E4%BB%99%E8%8A%B1%E6%95%B0/" data-id="ck3mg85150002g4vr4udg02ra" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-题目822画图" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/01/%E9%A2%98%E7%9B%AE822%E7%94%BB%E5%9B%BE/" class="article-date">
+  <time datetime="2019-12-01T02:50:28.479Z" itemprop="datePublished">2019-12-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/01/%E9%A2%98%E7%9B%AE822%E7%94%BB%E5%9B%BE/">题目822画图</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>画图<br>时间限制：1000 ms  |  内存限制：65535 KB</p>
+<p>描述<br>    计算机画图也挺有趣的哈！那我们就来用计算机画幅图吧。。。</p>
+<p>输入<br>    输入一个正整数N（0&lt;N&lt;=10），表示要输出的正方形的边上*的个数<br>输出<br>    输出一个满足题意的正方形<br>样例输入</p>
+<pre><code>4</code></pre><p>样例输出</p>
+<pre><code>****
+****
+****
+****</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int i,j,N;</span><br><span class="line">	printf(&quot;输入一个正整数N:&quot;);</span><br><span class="line">	while(1)</span><br><span class="line">	&#123;	</span><br><span class="line">		scanf(&quot;%d&quot;,&amp;N);</span><br><span class="line">		if(N&lt;0)</span><br><span class="line">		&#123;</span><br><span class="line">		break;</span><br><span class="line">		&#125;</span><br><span class="line">		if(N&gt;0&amp;&amp;N&lt;=10)</span><br><span class="line">		&#123;</span><br><span class="line">			for(i=0;i&lt;N;i++)</span><br><span class="line">			&#123;</span><br><span class="line">				for(j=0;j&lt;N;j++)</span><br><span class="line">				 &#123;</span><br><span class="line">				   printf(&quot;*&quot;);</span><br><span class="line">			     &#125;</span><br><span class="line">			     printf(&quot;*\n&quot;);</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">	    &#125;</span><br><span class="line">	    else</span><br><span class="line">	    &#123;</span><br><span class="line">	    printf(&quot;重新输入&quot;);</span><br><span class="line">		</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line"> return 0;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/01/%E9%A2%98%E7%9B%AE822%E7%94%BB%E5%9B%BE/" data-id="ck3mg851m0004g4vr5qwj8mdo" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-题目124中位数" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/11/30/%E9%A2%98%E7%9B%AE124%E4%B8%AD%E4%BD%8D%E6%95%B0/" class="article-date">
@@ -283,238 +506,6 @@ No answer</code></pre><figure class="highlight plain"><table><tr><td class="gutt
 
 
   
-    <article id="post-题目34韩信点兵" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/30/%E9%A2%98%E7%9B%AE34%E9%9F%A9%E4%BF%A1%E7%82%B9%E5%85%B5/" class="article-date">
-  <time datetime="2019-11-29T17:04:22.799Z" itemprop="datePublished">2019-11-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/30/%E9%A2%98%E7%9B%AE34%E9%9F%A9%E4%BF%A1%E7%82%B9%E5%85%B5/">题目34韩信点兵</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>韩信点兵<br>时间限制：3000 ms  |  内存限制：65535 KB</p>
-<p>描述<br>    相传韩信才智过人，从不直接清点自己军队的人数，只要让士兵先后以三人一排、五人一排、七人一排地变换队形，而他每次只掠一眼队伍的排尾就知道总人数了。输入3个非负整数a,b,c ，表示每种队形排尾的人数（a&lt;3,b&lt;5,c&lt;7），输出总人数的最小值（或报告无解）。已知总人数不小于10，不超过100 。</p>
-<p>输入<br>    输入3个非负整数a,b,c ，表示每种队形排尾的人数（a&lt;3,b&lt;5,c&lt;7）。例如,输入：2 4 5<br>输出<br>    输出总人数的最小值（或报告无解，即输出No answer）。实例，输出：89<br>样例输入</p>
-<pre><code>2 1 6</code></pre><p>样例输出</p>
-<pre><code>41</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">void main()</span><br><span class="line">&#123;</span><br><span class="line">int a,b,c,i,N;</span><br><span class="line">scanf(&quot;%d %d %d&quot;,&amp;a,&amp;b,&amp;c);</span><br><span class="line">for(i=3;;i++)</span><br><span class="line">&#123;</span><br><span class="line">	if(i%3==a &amp;&amp; i%5==b &amp;&amp; i%7==c)</span><br><span class="line">	break;</span><br><span class="line">&#125;</span><br><span class="line">    if(i&lt;10||i&gt;100)</span><br><span class="line"></span><br><span class="line"> printf(&quot;No answer&quot;);</span><br><span class="line">    else</span><br><span class="line"> printf(&quot;%d&quot;,i);</span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/30/%E9%A2%98%E7%9B%AE34%E9%9F%A9%E4%BF%A1%E7%82%B9%E5%85%B5/" data-id="ck3kfk5hw0004n4vrafzh4il3" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-题目31五个数求最值" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/30/%E9%A2%98%E7%9B%AE31%E4%BA%94%E4%B8%AA%E6%95%B0%E6%B1%82%E6%9C%80%E5%80%BC/" class="article-date">
-  <time datetime="2019-11-29T16:51:59.583Z" itemprop="datePublished">2019-11-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/30/%E9%A2%98%E7%9B%AE31%E4%BA%94%E4%B8%AA%E6%95%B0%E6%B1%82%E6%9C%80%E5%80%BC/">题目31五个数求最值</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>5个数求最值<br>时间限制：1000 ms  |  内存限制：65535 KB</p>
-<p>描述<br>    设计一个从5个整数中取最小数和最大数的程序</p>
-<p>输入<br>    输入只有一组测试数据，为五个不大于1万的正整数<br>输出<br>    输出两个数，第一个为这五个数中的最小值，第二个为这五个数中的最大值，两个数字以空格格开。<br>样例输入</p>
-<pre><code>1 2 3 4 5</code></pre><p>样例输出</p>
-<pre><code>1 5</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">void main()</span><br><span class="line">&#123;</span><br><span class="line"> int num[5],max,min,i;</span><br><span class="line"> for(i=0;i&lt;5;i++)</span><br><span class="line">  scanf(&quot;%d&quot;,&amp;num[i]);</span><br><span class="line"> max=num[0];</span><br><span class="line"> min=num[0];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> for(i=1;i&lt;5;i++)</span><br><span class="line"> &#123;</span><br><span class="line">  if(max&lt;num[i])</span><br><span class="line">   max=num[i];</span><br><span class="line">  if(min&gt;num[i])</span><br><span class="line">   min=num[i];</span><br><span class="line"> &#125;</span><br><span class="line"> printf(&quot;%d &quot;,min);</span><br><span class="line"> printf(&quot;%d\n&quot;,max);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/30/%E9%A2%98%E7%9B%AE31%E4%BA%94%E4%B8%AA%E6%95%B0%E6%B1%82%E6%9C%80%E5%80%BC/" data-id="ck3kfk5ht0003n4vr1wk9gw81" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-题目11奇偶数分离" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/30/%E9%A2%98%E7%9B%AE11%E5%A5%87%E5%81%B6%E6%95%B0%E5%88%86%E7%A6%BB/" class="article-date">
-  <time datetime="2019-11-29T16:50:33.397Z" itemprop="datePublished">2019-11-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/30/%E9%A2%98%E7%9B%AE11%E5%A5%87%E5%81%B6%E6%95%B0%E5%88%86%E7%A6%BB/">题目11奇偶数分离</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>描述<br>    有一个整型偶数n(2&lt;= n &lt;=10000),你要做的是：先把1到n中的所有奇数从小到大输出，再把所有的偶数从小到大输出。</p>
-<p>输入<br>    第一行有一个整数i（2&lt;=i&lt;30)表示有 i 组测试数据；<br>    每组有一个整型偶数n。<br>输出<br>    第一行输出所有的奇数<br>    第二行输出所有的偶数<br>样例输入</p>
-<pre><code>2
-10
-14</code></pre><p>样例输出</p>
-<pre><code>1 3 5 7 9 
-2 4 6 8 10 
-
-1 3 5 7 9 11 13 
-2 4 6 8 10 12 14 </code></pre><pre><code>#include &quot;stdio.h&quot;
-int main()
-{
-int n;
-scanf(&quot;%d&quot;,&amp;n);
-int a;
-while(n--)
-{
-scanf(&quot;%d&quot;,&amp;a);
-int i;
-for(i=1;i&lt;=a;i+=2) 
-printf(&quot;%d &quot;,i); 
-puts(&quot;&quot;); 
-for(i=2;i&lt;=a;i+=2) 
-printf(&quot;%d &quot;,i); 
-puts(&quot;&quot;); 
-}
-
- }
- ``</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/30/%E9%A2%98%E7%9B%AE11%E5%A5%87%E5%81%B6%E6%95%B0%E5%88%86%E7%A6%BB/" data-id="ck3kfk5hr0002n4vr3qhr7cch" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-题目4ASCII码排序" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/30/%E9%A2%98%E7%9B%AE4ASCII%E7%A0%81%E6%8E%92%E5%BA%8F/" class="article-date">
-  <time datetime="2019-11-29T16:37:58.424Z" itemprop="datePublished">2019-11-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/30/%E9%A2%98%E7%9B%AE4ASCII%E7%A0%81%E6%8E%92%E5%BA%8F/">题目4ASCII码排序</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>ASCII码排序<br>时间限制：3000 ms  |  内存限制：65535 KB<br>难度：2</p>
-<p>描述<br>    输入三个字符（可以重复）后，按各字符的ASCII码从小到大的顺序输出这三个字符。</p>
-<p>输入<br>    第一行输入一个数N,表示有N组测试数据。后面的N行输入多组数据，每组输入数据都是占一行，有三个字符组成，之间无空格。<br>输出<br>    对于每组输入数据，输出一行，字符中间用一个空格分开。<br>样例输入</p>
-<pre><code>3
-qwe
-asd
-zxc</code></pre><p>样例输出</p>
-<pre><code>e q w
-a d s
-c x z</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int m,n;</span><br><span class="line">	char a,b,c,d;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">scanf(&quot;%d&quot;,&amp;m);</span><br><span class="line">	for (n=0;n&lt;m;n++)</span><br><span class="line">	&#123;	</span><br><span class="line">		scanf(&quot; %c%c%c&quot;,&amp;a,&amp;b,&amp;c);</span><br><span class="line">			if(a&gt;b)</span><br><span class="line">			&#123;</span><br><span class="line">				d=a;</span><br><span class="line">				a=b;</span><br><span class="line">				b=d;</span><br><span class="line">			&#125;</span><br><span class="line">			if(b&gt;c)</span><br><span class="line">			&#123;</span><br><span class="line">				d=b;</span><br><span class="line">				b=c;</span><br><span class="line">				c=d;</span><br><span class="line">			&#125;</span><br><span class="line">			if(a&gt;b)</span><br><span class="line">			&#123;</span><br><span class="line">				d=a;</span><br><span class="line">				a=b;</span><br><span class="line">			b=d;</span><br><span class="line">			&#125;</span><br><span class="line">			printf(&quot;%c %c %c\n&quot;,a,b,c);</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//首先输入一个int型实现数据组数的判断，然后利用三个if语句实现顺序的改变，依次进行比较判断</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/30/%E9%A2%98%E7%9B%AE4ASCII%E7%A0%81%E6%8E%92%E5%BA%8F/" data-id="ck3kfk5hz0005n4vr57l0fxgi" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-题目1 ：A+B Problem" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/29/%E9%A2%98%E7%9B%AE1%20%EF%BC%9AA+B%20Problem/" class="article-date">
-  <time datetime="2019-11-29T03:26:47.546Z" itemprop="datePublished">2019-11-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/29/%E9%A2%98%E7%9B%AE1%20%EF%BC%9AA+B%20Problem/">题目1 ：A+B Problem</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>描述<br>    此题为练手用题，请大家计算一下a+b的值</p>
-<p>输入<br>    输入两个数，a,b<br>输出<br>    输出a+b的值<br>样例输入</p>
-<pre><code>2 3</code></pre><p>样例输出</p>
-<pre><code>5</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">int a,b;</span><br><span class="line">scanf(&quot;%d%d&quot;,&amp;a,&amp;b);</span><br><span class="line">printf(&quot;%d\n&quot;,a+b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/29/%E9%A2%98%E7%9B%AE1%20%EF%BC%9AA+B%20Problem/" data-id="ck3jl61xq0000qgvrd64ahf1x" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -538,7 +529,7 @@ c x z</code></pre><figure class="highlight plain"><table><tr><td class="gutter">
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
     </div>
   </div>
 
@@ -551,23 +542,23 @@ c x z</code></pre><figure class="highlight plain"><table><tr><td class="gutter">
       <ul>
         
           <li>
-            <a href="/2019/11/30/%E9%A2%98%E7%9B%AE124%E4%B8%AD%E4%BD%8D%E6%95%B0/">题目124中位数</a>
+            <a href="/2019/12/01/%E9%A2%98%E7%9B%AE324%E7%8C%B4%E5%AD%90%E5%90%83%E6%A1%83%E9%97%AE%E9%A2%98/">题目324猴子吃桃问题</a>
           </li>
         
           <li>
-            <a href="/2019/11/30/%E9%A2%98%E7%9B%AE98%E6%88%90%E7%BB%A9%E8%BD%AC%E6%8D%A2/">题目98成绩转换</a>
+            <a href="/2019/12/01/%E9%A2%98%E7%9B%AE260%E6%95%B0%E6%95%B0%E5%B0%8F%E6%9C%A8%E5%9D%97/">题目260数数小木块</a>
           </li>
         
           <li>
-            <a href="/2019/11/30/%E9%A2%98%E7%9B%AE40%E5%85%AC%E7%BA%A6%E6%95%B0%E5%92%8C%E5%85%AC%E5%80%8D%E6%95%B0/">题目40公约数和公倍数</a>
+            <a href="/2019/12/01/%E9%A2%98%E7%9B%AE457%E5%A4%A7%E5%B0%8F%E5%86%99%E4%BA%92%E6%8D%A2/">题目457大小写互换</a>
           </li>
         
           <li>
-            <a href="/2019/11/30/%E9%A2%98%E7%9B%AE41%E4%B8%89%E4%B8%AA%E6%95%B0%E4%BB%8E%E5%B0%8F%E5%88%B0%E5%A4%A7%E6%AF%94%E8%BE%83/">题目41三个数从小到大比较</a>
+            <a href="/2019/12/01/%E9%A2%98%E7%9B%AE39%E6%B0%B4%E4%BB%99%E8%8A%B1%E6%95%B0/">题目39水仙花数</a>
           </li>
         
           <li>
-            <a href="/2019/11/30/%E9%A2%98%E7%9B%AE64%E9%B8%A1%E5%85%94%E5%90%8C%E7%AC%BC/">题目64鸡兔同笼</a>
+            <a href="/2019/12/01/%E9%A2%98%E7%9B%AE822%E7%94%BB%E5%9B%BE/">题目822画图</a>
           </li>
         
       </ul>
